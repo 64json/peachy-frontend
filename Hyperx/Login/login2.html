@@ -1,0 +1,208 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: black;
+            position: relative;
+            width: 1024px;
+            height: 575px;
+        }
+		
+		.flex-container > .leftside {
+			width: 50%;
+		}
+		
+		.flex-container > .leftside > img {
+			position: absolute;
+			width: 151px;
+			height: 53px;
+			left: 32px;
+			top: 26.5px;
+		}
+		
+		.flex-container > .leftside > .companyDetails {
+			position: absolute;
+			width: 382px;
+			height: 176px;
+			left: 40px;
+			top: 217px;
+		}
+		
+		.flex-container > .leftside > .companyDetails > .tagline {
+			width: 382px;
+			height: 117px;
+			left: 40px;
+			top: 217px;
+		}
+		
+		.flex-container > .leftside > .companyDetails > .tagline > .title {
+			position: absolute;
+			height: 38px;
+			left: 0%;
+			right: 1.31%;
+			top: calc(50% - 38px/2 - 39.5px);
+
+			font-family: Pangram;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 32px;
+			line-height: 38px;
+
+			color: #FEFEF9;
+		}
+		
+		.flex-container > .leftside > .companyDetails > .tagline > .description {
+			position: absolute;
+			height: 57px;
+			left: 0%;
+			right: 0%;
+			top: calc(50% - 57px/2 + 27px);
+
+			font-family: Pangram;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 19px;
+
+			color: #FEFEF9;
+		}
+		
+		.flex-container > .leftside > .companyDetails > .moreInfo {
+			width: 142px;
+			height: 30px;
+			left: 41px;
+			padding-top: 100px;
+		}
+		
+		.flex-container > .leftside > .companyDetails > .moreInfo > button {
+			height: 21px;
+			left: 0%;
+			right: 0%;
+			top: calc(50% - 21px/2 + 0.5px);
+
+			font-family: Pangram;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 19px;
+			text-align: center;
+
+			color: #C65C43;
+		}
+		
+		.flex-container > .rightSide {
+			width: 100%;
+		}
+		
+		.flex-container > .rightSide > .loginBox {
+			position: absolute;
+			width: 299px;
+			height: 313px;
+			left: 602px;
+			top: 147px;
+
+			background: #FEFEF9;
+			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+			border-radius: 10px;
+		}
+		
+		.flex-container > .rightSide > .loginBox > .loginTitle {
+			font-family: Futura;
+			font-size: 15px;
+			line-height: 18px;
+			text-align: center;
+
+			color: #100530;
+
+			mix-blend-mode: normal;
+			opacity: 0.27;
+		}
+		
+		.flex-container > .rightSide > .loginBox > .inputField {
+			width: 240px;
+			height: 153px;
+			left: 632px;
+			top: 210px;
+		}
+		
+		.flex-container > .rightSide > .loginBox > .inputField > .inputNameField {
+			width: 240px;
+			height: 45px;
+			left: 632px;
+			top: 210px;
+		}
+		
+		.flex-container > .rightSide > .loginBox > .inputField > .inputNameField > p {
+			height: 13px;
+			padding-left: 20px;
+
+			font-style: normal;
+			font-weight: bold;
+			font-size: 11px;
+			line-height: 13px;
+
+			color: #100530;
+
+		}
+		
+		.flex-container > .rightSide > .loginBox > .inputField > .inputNameField > .form {
+			
+		}
+		
+    </style>
+</head>
+
+<body style="background-image: url('ALLBG.png');">
+	<div class="flex-container">
+		<div class="leftSide">
+			<img src="logo.png">
+			<div class="companyDetails">
+				<div class="tagline">
+					<p class="title">Plan easy, travel Peachy!</p>
+					<p class="description">Nobody likes to be disappointed by tourists traps during their holidays. Let a local plan an itinerary that is tailored uniquely to you.</p>
+				</div>
+				<div class="moreInfo">
+					<button style="border-radius: 4px; background-color: FFBC9E; height: 30px; width: 140px">Find out more</button>
+				</div>
+			</div>
+		</div>
+		
+		<div class="rightSide">
+			<div class="loginBox" style="margin-left: 90px; margin-top: 10px">
+				<p class="loginTitle">"Don't keep your local waiting!"</p>
+				<div class="inputField">
+					<div class="inputNameField">
+						<p>NAME:</p>
+						<form action="/action_page.php">
+							<input type="text" name="fname" style="height: 25px; width: 240px; margin-left: 20px; background: #F7F7F7; box-shadow: inset 0px 0px 5px rgba(131, 131, 131, 0.5); border-radius: 10px;">
+						</form>
+					</div>
+					<div class="inputNameField">
+						<p>EMAIL:</p>
+						<form action="/action_page.php">
+							<input type="text" name="fname" style="height: 25px; width: 240px; margin-left: 20px; background: #F7F7F7; box-shadow: inset 0px 0px 5px rgba(131, 131, 131, 0.5); border-radius: 10px;">
+						</form>
+					</div>
+					<div class="inputNameField">
+						<p>PASSWORD:</p>
+						<form action="/action_page.php">
+							<input type="text" name="fname" style="height: 25px; width: 240px; margin-left: 20px; background: #F7F7F7; box-shadow: inset 0px 0px 5px rgba(131, 131, 131, 0.5); border-radius: 10px;">
+						</form>
+					</div>
+					<div style="display: flex;">
+						<button style="margin-left: 30px; width: 94px; height: 25px; margin-top: 40px; background: #F48A70; box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); border-radius: 5px; font-family: Pangram; font-style: normal; font-weight: bold; font-size: 13px; line-height: 16px; text-align: center; color: #FEFEF9;">SIGN UP</button>
+						<button style="margin-left: 30px; width: 94px; height: 25px; margin-top: 40px; background: #FEFEF9; box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); border-radius: 5px; font-family: Pangram; font-style: normal; font-weight: bold; font-size: 13px; line-height: 16px; text-align: center; color: #100530;">LOG IN</button>
+					</div>
+					<p style="margin-left: 50px; font-style: normal; font-weight: bold; font-size: 9px; line-height: 11px; color: #100530; mix-blend-mode: normal; opacity: 0.3;">By clicking Sign Up you agree to our Terms</p>
+				</div>
+			</div>
+			<div style="padding-top: 524px; margin-left: 900px;">
+				<a href="#" style=" font-style: normal; font-weight: normal; font-size: 16px; line-height: 19px; color: #FEFEF9; mix-blend-mode: normal; opacity: 0.5;">Tokyo, Shibuya</a>
+				<img src="shape.png"/>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
