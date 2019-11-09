@@ -2,7 +2,7 @@ import React from 'react';
 import './stylesheet.scss';
 import { GoogleMap, withGoogleMap, withScriptjs } from 'react-google-maps';
 
-function Map() {
+function Map({ children }) {
   return (
     <GoogleMap
       defaultZoom={13}
@@ -13,6 +13,7 @@ function Map() {
         streetViewControl: false,
       }}
       clickableIcons={false}>
+      {children}
     </GoogleMap>
   );
 }

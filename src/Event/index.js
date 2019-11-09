@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { classes, formatTime } from '../utils';
 
 function Event({ className, event, onMouseDown, onResize }) {
-  const { icon, color, cover, name, venue, start, duration } = event;
+  const { category, cover, name, venue, start, duration } = event;
   const end = start + duration;
   const time = `November ${8 + start / 24 | 0}th, ${formatTime(start)} - ${formatTime(end)} ${end < 12 ? 'A' : 'P'}M`;
   return (
@@ -12,10 +12,10 @@ function Event({ className, event, onMouseDown, onResize }) {
       backgroundImage: `url(${cover})`,
       top: 72 * start,
       height: 72 * duration,
-      borderColor: color,
+      borderColor: category.color,
     }} onMouseDown={onMouseDown}>
-      <div className="icon" style={{ backgroundColor: color }}>
-        <FontAwesomeIcon icon={icon} fixedWidth/>
+      <div className="icon" style={{ backgroundColor: category.color }}>
+        <FontAwesomeIcon icon={category.icon} fixedWidth/>
       </div>
       <div className="info">
         <div className="name">{name}</div>

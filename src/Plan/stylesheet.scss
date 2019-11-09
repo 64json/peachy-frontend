@@ -232,26 +232,106 @@
   }
 
   .mapWrapper {
+    position: relative;
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-  }
 
-  .add {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 64px;
-    height: 64px;
-    border-radius: 64px;
-    background-color: $color-primary;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: $font-size-large;
-    margin: 32px;
-    box-shadow: 0 0 8px $color-shadow;
+    .searchContainer {
+      position: absolute;
+      top: 0;
+      margin: 32px;
+      width: 400px;
+      align-self: center;
+      padding: 8px;
+      display: flex;
+      align-items: stretch;
+      background-color: white;
+      border-radius: 4px;
+      box-shadow: 0 0 8px $color-shadow;
+
+      .icon {
+        padding: 8px;
+        color: $color-text-light;
+      }
+
+      .search {
+        flex: 1;
+        padding: 8px;
+      }
+    }
+
+    .addContainer {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      pointer-events: none;
+
+      .icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        box-shadow: 0 0 8px $color-shadow;
+
+        &.add {
+          width: 64px;
+          height: 64px;
+          border-radius: 64px;
+          background-color: $color-primary;
+          cursor: pointer;
+          pointer-events: auto;
+          transition: transform .2s;
+          font-size: $font-size-large;
+        }
+      }
+
+      .categoryContainer {
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 8px;
+        padding-bottom: 8px;
+        transition: opacity .2s;
+
+        .category {
+          display: flex;
+          align-items: center;
+          margin-bottom: 8px;
+
+          .name {
+            margin-left: 8px;
+            box-shadow: 0 0 8px $color-shadow;
+            background-color: white;
+            padding: 4px 8px;
+            margin-right: 8px;
+            border-radius: 4px;
+            font-size: $font-size-small;
+          }
+        }
+      }
+
+      &.active {
+        pointer-events: auto;
+
+        .categoryContainer {
+          pointer-events: auto;
+          opacity: 1;
+        }
+
+        .add {
+          transform: rotate(135deg);
+        }
+      }
+    }
   }
 }
