@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './stylesheet.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSeedling } from '@fortawesome/free-solid-svg-icons/faSeedling';
 import Profile from '../Profile';
 import Map from '../Map';
 import profile1 from '../img/profile1.jpg';
@@ -13,6 +12,7 @@ import coverAndywarhol from '../img/cover_andywarhol.jpg';
 import coverGarosugil from '../img/cover_garosugil.jpg';
 import coverPcbang from '../img/cover_pcbang.jpg';
 import * as markerMap from '../img/category';
+import logo from '../img/logo.svg';
 import { classes } from '../utils';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons/faPaperPlane';
 import { faPlus } from '@fortawesome/free-solid-svg-icons/faPlus';
@@ -189,10 +189,7 @@ function Plan() {
     <div className="Plan">
       <div className="sidebar">
         <div className="logo">
-          <div className="icon">
-            <FontAwesomeIcon icon={faSeedling} fixedWidth/>
-          </div>
-          <div className="text">Peachy</div>
+          <img src={logo}/>
         </div>
         <div className="trip">
           <div className="cover">

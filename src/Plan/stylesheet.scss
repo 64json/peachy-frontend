@@ -18,15 +18,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 16px;
+      padding: 4px;
       color: $color-primary;
 
-      .icon {
-
-      }
-
-      .text {
-        font-weight: bold;
+      img {
+        height: 64px;
       }
     }
 
