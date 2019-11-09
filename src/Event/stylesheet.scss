@@ -1,0 +1,58 @@
+@import '../constants';
+
+.Event {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 4px solid;
+  box-shadow: 0 0 8px $color-shadow;
+  cursor: pointer;
+  user-select: none;
+
+  .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -26px;
+    margin-top: 8px;
+    box-shadow: 0 0 8px $color-shadow;
+  }
+
+  .info {
+    padding: 16px 20px;
+    color: white;
+    background: linear-gradient(rgba($color-dim, 0), rgba($color-dim, 1));
+
+    .name {
+      font-weight: bold;
+    }
+
+    .time {
+      font-size: $font-size-small;
+    }
+
+    .venue {
+      font-size: $font-size-small;
+    }
+  }
+
+  .resize {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    margin: -4px;
+    cursor: ns-resize;
+  }
+}

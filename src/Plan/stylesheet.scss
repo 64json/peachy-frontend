@@ -1,0 +1,257 @@
+@import '../constants';
+
+.Plan {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+
+  .sidebar {
+    z-index: 1;
+    width: 320px;
+    box-shadow: 0 0 8px $color-shadow;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    .logo {
+      font-size: $font-size-large;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+      color: $color-primary;
+
+      .icon {
+
+      }
+
+      .text {
+        font-weight: bold;
+      }
+    }
+
+    .trip {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+
+      .cover {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+        height: 200px;
+        background-image: url(../img/seoul.jpg);
+        background-position: center;
+        background-size: cover;
+
+        .info {
+          padding: 8px 12px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          font-size: $font-size-small;
+          color: white;
+        }
+
+        .name {
+          padding: 16px 20px;
+          color: white;
+          background: linear-gradient(rgba($color-dim, 0), rgba($color-dim, 1));
+          font-weight: bold;
+        }
+      }
+
+      .participants {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        .profile {
+          border-bottom: 1px solid $color-border;
+        }
+      }
+    }
+
+    .chat {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+
+      .history {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 4px 12px;
+        border-bottom: 1px solid $color-border;
+
+        .balloon {
+          font-size: $font-size-small;
+          padding: 8px 12px;
+          border-radius: 1rem;
+          margin: 4px 0;
+        }
+
+        .traveller {
+          align-self: flex-end;
+          background-color: $color-primary;
+          color: white;
+          margin-left: 64px;
+        }
+
+        .planner {
+          align-self: flex-start;
+          background-color: $color-secondary;
+          color: white;
+          margin-right: 64px;
+        }
+      }
+
+      .message {
+        display: flex;
+        align-items: stretch;
+
+        .input {
+          flex: 1;
+          padding: 4px 8px;
+          font-size: $font-size-small;
+        }
+
+        .send {
+          background-color: $color-primary;
+          color: white;
+          padding: 8px 12px;
+        }
+      }
+    }
+  }
+
+  .calendarWrapper {
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+
+    .calendar {
+      position: relative;
+      display: flex;
+      align-items: stretch;
+
+      .timeline {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 96px;
+        padding-right: 48px;
+        border-right: 4px solid $color-primary-light;
+
+        .timeLabel {
+          height: 72px;
+          font-size: $font-size-smallest;
+          color: $color-shadow;
+          margin-top: -.5em;
+          margin-bottom: .5em;
+
+          &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            margin-left: 8px;
+            margin-top: .5em;
+            background-color: $color-shadow;
+          }
+        }
+      }
+
+      .days {
+        position: absolute;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        .dayLabelWrapper {
+          height: 1728px;
+          margin-top: -.5em;
+          margin-bottom: .5em;
+
+          .dayLabel {
+            position: relative;
+            width: 80px;
+            background-color: white;
+            color: $color-text-light;
+            text-align: right;
+            padding-right: 8px;
+            font-size: $font-size-small;
+            font-weight: bold;
+
+            &.active {
+              position: fixed;
+              top: 0;
+            }
+          }
+        }
+      }
+
+      .eventContainer {
+        position: relative;
+        flex: 1;
+        margin-left: -4px;
+
+        .event {
+          position: absolute;
+          left: 0;
+          right: 8px;
+
+          &.active {
+            z-index: 1;
+            opacity: .7;
+          }
+        }
+      }
+    }
+  }
+
+  .divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12px;
+    background-color: $color-text;
+    opacity: .8;
+    cursor: ew-resize;
+
+    .handle {
+      width: 4px;
+      height: 64px;
+      border-radius: 4px;
+      background-color: $color-text-light;
+    }
+  }
+
+  .mapWrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .add {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 64px;
+    background-color: $color-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: $font-size-large;
+    margin: 32px;
+    box-shadow: 0 0 8px $color-shadow;
+  }
+}

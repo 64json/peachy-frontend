@@ -1,0 +1,48 @@
+@import '../constants';
+
+.Profile {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+
+  .picture {
+    background-position: center;
+    background-size: cover;
+    width: 44px;
+    height: 44px;
+    border-radius: 44px;
+    border: 2px solid
+  }
+
+  &.traveller {
+    .picture {
+      border-color: $color-primary;
+    }
+  }
+
+  &.planner {
+    .picture {
+      border-color: $color-secondary;
+    }
+  }
+
+  .name {
+    margin-left: 8px;
+    flex: 1;
+
+    .primary {
+      font-weight: bold;
+    }
+
+    .secondary {
+      font-size: $font-size-small;
+    }
+  }
+
+  .role {
+    margin-left: 8px;
+    font-size: $font-size-small;
+    color: $color-text-light;
+    font-weight: bold;
+  }
+}
