@@ -19,7 +19,8 @@ body {
   flex-shrink: 0;
 }
 
-input {
+input,
+textarea {
   outline: none;
   border: none;
   color: inherit;
@@ -27,4 +28,7 @@ input {
   font-weight: inherit;
   font-family: inherit;
   padding: 0;
+  background: none;
+  width: auto;
+  min-width: 0;
 }

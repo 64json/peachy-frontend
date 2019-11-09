@@ -9,6 +9,9 @@ import profile2 from '../img/profile2.jpg';
 import coverBeer from '../img/cover_beer.jpg';
 import coverBukak from '../img/cover_bukak.jpg';
 import coverSchoolfood from '../img/cover_schoolfood.jpg';
+import coverAndywarhol from '../img/cover_andywarhol.jpg';
+import coverGarosugil from '../img/cover_garosugil.jpg';
+import coverPcbang from '../img/cover_pcbang.jpg';
 import * as markerMap from '../img/category';
 import { classes } from '../utils';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons/faPaperPlane';
@@ -62,13 +65,27 @@ const categoryMap = {
   },
 };
 
+
 function Plan() {
   const calendarRef = useRef(null);
   const [activeDay, setActiveDay] = useState(0);
-  const [activeEvent, setActiveEvent] = useState(-1);
+  const [movingEventId, setMovingEventId] = useState(null);
+  const [activeEventId, setActiveEventId] = useState(null);
   const [adding, setAdding] = useState(false);
+  const [keyword, setKeyword] = useState('');
+  const [results, setResults] = useState([]);
+  const [message, setMessage] = useState('');
+  const [validClick, setValidClick] = useState(false);
+  const [chats, setChats] = useState([
+    [0, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'],
+    [1, 'Ut enim ad minim veniam.'],
+    [0, 'quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'],
+    [1, 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'],
+    [0, 'Excepteur sint occaecat cupidatat non proident.'],
+    [1, 'sunt in culpa qui officia deserunt mollit anim id est laborum.'],
+  ]);
   const [events, setEvents] = useState([{
-    id: 'awgeioja',
+    id: 'bukak',
     category: categoryMap.outdoor_activities,
     cover: coverBukak,
     name: 'Hiking Bukak Skyway',
@@ -77,10 +94,11 @@ function Plan() {
       lat: 37.602199,
       lng: 126.980590,
     },
-    start: 10,
-    duration: 2,
+    start: 9,
+    duration: 3,
+    memo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   }, {
-    id: 'hiuheww',
+    id: 'schoolfood',
     category: categoryMap.food_and_beverage,
     cover: coverSchoolfood,
     name: 'Lunch at School Food',
@@ -91,8 +109,35 @@ function Plan() {
     },
     start: 12.5,
     duration: 1.5,
+    memo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   }, {
-    id: 'hijesrer',
+    id: 'ddp',
+    category: categoryMap.landmarks,
+    cover: coverAndywarhol,
+    name: 'Andy Warhol Exhibition at Dongdaemun Design Plaza',
+    venue: '281 Eulji-ro, Euljiro 7(chil)-ga',
+    position: {
+      lat: 37.566921,
+      lng: 127.009485,
+    },
+    start: 14.5,
+    duration: 2.5,
+    memo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  }, {
+    id: 'garosugil',
+    category: categoryMap.shopping,
+    cover: coverGarosugil,
+    name: 'Shopping in Garosugil',
+    venue: '13 Dosan-daero 13-gil, Sinsa-dong',
+    position: {
+      lat: 37.518847,
+      lng: 127.022995,
+    },
+    start: 17.5,
+    duration: 1.5,
+    memo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  }, {
+    id: 'rooftop',
     category: categoryMap.food_and_beverage,
     cover: coverBeer,
     name: 'Beer at the Best Rooftop in Seoul',
@@ -101,13 +146,44 @@ function Plan() {
       lat: 37.499748,
       lng: 127.028594,
     },
-    start: 20,
-    duration: 3,
+    start: 22,
+    duration: 2,
+    memo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   }]);
+
+  const getModifiedEvents = newEvent => {
+    return events.map(oldEvent => newEvent.id === oldEvent.id ? newEvent : oldEvent).sort((e1, e2) => e1.start - e2.start);
+  };
+
+  const mockResults = () => {
+    setTimeout(() => {
+      const results = [];
+      const center = { lat: 37.544328, lng: 126.980319 };
+      const radius = .03;
+      while (results.length < 20) {
+        const pos = {
+          lat: center.lat - radius + Math.random() * radius * 2,
+          lng: center.lng - radius + Math.random() * radius * 2,
+        };
+        if (Math.pow(pos.lat - center.lat, 2) + Math.pow(pos.lng - center.lng, 2) > radius * radius) continue;
+        results.push(pos);
+      }
+      setResults(results);
+    }, 300);
+  };
+
+  useEffect(() => {
+    if (activeEventId !== null) {
+      const event = events.find(event => event.id === activeEventId);
+      calendarRef.current.scrollTo({ top: 72 * event.start, behavior: 'smooth' });
+    }
+  }, [activeEventId]);
 
   useEffect(() => {
     calendarRef.current.scrollTop = 72 * 7;
   }, []);
+
+  let activeEvent = events.find(event => event.id === activeEventId);
 
   return (
     <div className="Plan">
@@ -138,13 +214,20 @@ function Plan() {
         <div className="chat">
           <div className="history">
             {
-              ['Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'Ut enim ad minim veniam.', 'quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', 'Excepteur sint occaecat cupidatat non proident.', 'sunt in culpa qui officia deserunt mollit anim id est laborum.'].map((message, i) => (
-                <div key={i} className={classes('balloon', i % 2 === 1 ? 'traveller' : 'planner')}>{message}</div>
+              chats.map(([index, message], i) => (
+                <div key={i} className={classes('balloon', ['traveller', 'planner'][index])}>{message}</div>
               ))
             }
           </div>
           <div className="message">
-            <input className="input" type="text"/>
+            <input className="input" type="text" value={message}
+                   onChange={e => setMessage(e.target.value)}
+                   onKeyDown={e => {
+                     if (e.keyCode === 13) {
+                       setChats([...chats, [0, message]]);
+                       setMessage('');
+                     }
+                   }}/>
             <div className="send">
               <FontAwesomeIcon icon={faPaperPlane} fixedWidth/>
             </div>
@@ -157,7 +240,6 @@ function Plan() {
           <div className="timeline">
             {
               new Array(72).fill(0).map((_, i) => {
-                const day = i / 24 | 0;
                 const time = i % 24;
                 const timeLabel = `${time % 12 === 0 ? 12 : time % 12} ${time < 12 ? 'A' : 'P'}M`;
                 return (
@@ -183,56 +265,61 @@ function Plan() {
           </div>
           <div className="eventContainer">
             {
-              events.map(event => (
-                <Event className={classes('event', activeEvent === event.id && 'active')} key={event.id} event={event}
-                       onMouseDown={e => {
-                         setActiveEvent(event.id);
-                         const initY = e.target.closest('.event').offsetTop;
-                         const offsetY = e.clientY;
-                         const onMouseMove = e => {
-                           const newY = initY + e.clientY - offsetY;
-                           const start = (newY / 72 * 6 | 0) / 6;
-                           if (start !== event.start) {
-                             const newEvents = events.map(oldEvent => event.id === oldEvent.id ? {
-                               ...oldEvent,
-                               start,
-                             } : oldEvent).sort((e1, e2) => e1.start - e2.start);
-                             setEvents(newEvents);
-                           }
-                         };
-                         const onMouseUp = e => {
-                           setActiveEvent(-1);
-                           window.removeEventListener('mousemove', onMouseMove);
-                           window.removeEventListener('mouseup', onMouseUp);
-                         };
-                         window.addEventListener('mousemove', onMouseMove);
-                         window.addEventListener('mouseup', onMouseUp);
-                       }}
-                       onResize={e => {
-                         e.stopPropagation();
-                         const initHeight = e.target.closest('.event').clientHeight + 8;
-                         console.log(initHeight);
-                         const offsetY = e.clientY;
-                         const onMouseMove = e => {
-                           const newHeight = initHeight + e.clientY - offsetY;
-                           const duration = (newHeight / 72 * 6 | 0) / 6;
-                           if (duration !== event.start) {
-                             const newEvents = events.map(oldEvent => event.id === oldEvent.id ? {
-                               ...oldEvent,
-                               duration,
-                             } : oldEvent);
-                             setEvents(newEvents);
-                           }
-                         };
-                         const onMouseUp = e => {
-                           setActiveEvent(-1);
-                           window.removeEventListener('mousemove', onMouseMove);
-                           window.removeEventListener('mouseup', onMouseUp);
-                         };
-                         window.addEventListener('mousemove', onMouseMove);
-                         window.addEventListener('mouseup', onMouseUp);
-                       }}/>
-              ))
+              events.map(event => {
+                const moving = movingEventId === event.id;
+                const active = activeEventId === event.id;
+                return (
+                  <Event
+                    className={classes('event', moving && 'moving')}
+                    active={active}
+                    key={event.id} event={event}
+                    onChange={event => {
+                      setEvents(getModifiedEvents(event));
+                    }}
+                    onMouseDown={active ? undefined : e => {
+                      setValidClick(true);
+                      setMovingEventId(event.id);
+                      const initY = e.target.closest('.event').offsetTop;
+                      const offsetY = e.clientY;
+                      const onMouseMove = e => {
+                        setValidClick(false);
+                        const newY = initY + e.clientY - offsetY;
+                        const start = (newY / 72 * 6 | 0) / 6;
+                        if (start !== event.start) {
+                          setEvents(getModifiedEvents({ ...event, start }));
+                        }
+                      };
+                      const onMouseUp = e => {
+                        setMovingEventId(null);
+                        window.removeEventListener('mousemove', onMouseMove);
+                        window.removeEventListener('mouseup', onMouseUp);
+                      };
+                      window.addEventListener('mousemove', onMouseMove);
+                      window.addEventListener('mouseup', onMouseUp);
+                    }}
+                    onResize={active ? undefined : e => {
+                      e.stopPropagation();
+                      setMovingEventId(event.id);
+                      const initHeight = e.target.closest('.event').clientHeight + 8;
+                      const offsetY = e.clientY;
+                      const onMouseMove = e => {
+                        const newHeight = initHeight + e.clientY - offsetY;
+                        const duration = (newHeight / 72 * 6 | 0) / 6;
+                        if (duration !== event.start) {
+                          setEvents(getModifiedEvents({ ...event, duration }));
+                        }
+                      };
+                      const onMouseUp = e => {
+                        setMovingEventId(null);
+                        window.removeEventListener('mousemove', onMouseMove);
+                        window.removeEventListener('mouseup', onMouseUp);
+                      };
+                      window.addEventListener('mousemove', onMouseMove);
+                      window.addEventListener('mouseup', onMouseUp);
+                    }}
+                    onClick={() => validClick && setActiveEventId(active ? null : event.id)}/>
+                );
+              })
             }
           </div>
         </div>
@@ -247,14 +334,15 @@ function Plan() {
             googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfhWtYTdL75LXpJ-TxTKsg3V2RXdHniGQ&v=3.exp&libraries=geometry,drawing,places"
             loadingElement={<div style={{ height: `100%` }}/>}
             containerElement={<div style={{ height: `100%` }}/>}
-            mapElement={<div style={{ height: `100%` }}/>}>
+            mapElement={<div style={{ height: `100%` }}/>}
+            center={activeEvent && activeEvent.position}>
             {
               events.slice(1).map((to, i) => {
                 const from = events[i];
                 return (
-                  <Polyline path={[from.position, to.position]} options={{
+                  <Polyline key={`${to.id}<-${from.id}`} path={[from.position, to.position]} options={{
                     strokeColor: '#4a752d',
-                    strokeOpacity: .5,
+                    strokeOpacity: .8,
                   }}/>
                 );
               })
@@ -268,19 +356,89 @@ function Plan() {
                 }}/>
               ))
             }
+            {
+              results.map((position, i) => (
+                <Marker key={i} position={position} draggable
+                        onDragStart={(a, b, c) => {
+                          const event = {
+                            id: 'pcbang',
+                            category: categoryMap.others,
+                            cover: coverPcbang,
+                            name: 'Big O Gaming Cafe',
+                            venue: 'Jangmun-ro 15na-gil, Bogwang-dong',
+                            position,
+                            start: 0,
+                            duration: 2,
+                          };
+                          const newEvents = [
+                            ...events,
+                            event,
+                          ].sort((e1, e2) => e1.start - e2.start);
+                          let firstMove = true;
+                          const onMouseMove = e => {
+                            if (firstMove) {
+                              setResults([]);
+                              setMovingEventId(event.id);
+                              setEvents(newEvents);
+                              firstMove = false;
+                            }
+                            const y = calendarRef.current.scrollTop + e.clientY;
+                            const start = (y / 72 * 6 | 0) / 6;
+                            if (start !== event.start) {
+                              const modifiedEvents = newEvents.map(oldEvent => event.id === oldEvent.id ? {
+                                ...oldEvent,
+                                start,
+                              } : oldEvent).sort((e1, e2) => e1.start - e2.start);
+                              setEvents(modifiedEvents);
+                            }
+                          };
+                          const onMouseUp = e => {
+                            setValidClick(true);
+                            setActiveEventId(event.id);
+                            setMovingEventId(null);
+                            calendarRef.current.removeEventListener('mousemove', onMouseMove);
+                            window.removeEventListener('mouseup', onMouseUp);
+                          };
+                          calendarRef.current.addEventListener('mousemove', onMouseMove);
+                          window.addEventListener('mouseup', onMouseUp);
+                        }}
+                        onDragEnd={() => {
+                          setKeyword('');
+                          setResults([]);
+                        }}/>
+              ))
+            }
           </Map>
         }
         <div className="searchContainer">
           <div className="icon">
             <FontAwesomeIcon icon={faSearch} fixedWidth/>
           </div>
-          <input className="search" type="text"/>
+          <input className="search" type="text" value={keyword} onChange={e => setKeyword(e.target.value)}
+                 onKeyDown={e => {
+                   if (e.keyCode === 13) {
+                     if (keyword === '') {
+                       setResults([]);
+                       return;
+                     }
+                     mockResults();
+                   }
+                 }}/>
         </div>
         <div className={classes('addContainer', adding && 'active')}>
           <div className="categoryContainer">
             {
               Object.values(categoryMap).map(category => (
-                <Category key={category.name} icon={category.icon} color={category.color} name={category.name}/>
+                <div className="category" key={category.name} onClick={() => {
+                  setKeyword(category.name);
+                  setAdding(false);
+                  mockResults();
+                }}>
+                  <div className="name">{category.name}</div>
+                  <div className="icon" style={{ backgroundColor: category.color }}>
+                    <FontAwesomeIcon icon={category.icon} fixedWidth/>
+                  </div>
+                </div>
               ))
             }
           </div>
@@ -288,17 +446,6 @@ function Plan() {
             <FontAwesomeIcon icon={faPlus} fixedWidth/>
           </div>
         </div>
-      </div>
-    </div>
-  );
-}
-
-function Category({ icon, color, name }) {
-  return (
-    <div className="category">
-      <div className="name">{name}</div>
-      <div className="icon" style={{ backgroundColor: color }}>
-        <FontAwesomeIcon icon={icon} fixedWidth/>
       </div>
     </div>
   );

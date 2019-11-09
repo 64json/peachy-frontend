@@ -85,26 +85,27 @@
         flex-direction: column;
         padding: 4px 12px;
         border-bottom: 1px solid $color-border;
+        overflow-y: auto;
 
         .balloon {
           font-size: $font-size-small;
           padding: 8px 12px;
           border-radius: 1rem;
           margin: 4px 0;
-        }
 
-        .traveller {
-          align-self: flex-end;
-          background-color: $color-primary;
-          color: white;
-          margin-left: 64px;
-        }
+          &.traveller {
+            align-self: flex-end;
+            background-color: $color-primary;
+            color: white;
+            margin-left: 64px;
+          }
 
-        .planner {
-          align-self: flex-start;
-          background-color: $color-secondary;
-          color: white;
-          margin-right: 64px;
+          &.planner {
+            align-self: flex-start;
+            background-color: $color-secondary;
+            color: white;
+            margin-right: 64px;
+          }
         }
       }
 
@@ -205,9 +206,14 @@
           left: 0;
           right: 8px;
 
-          &.active {
+          &.moving {
             z-index: 1;
             opacity: .7;
+            transition: none;
+
+            .cover {
+              transition: none;
+            }
           }
         }
       }
@@ -219,7 +225,7 @@
     justify-content: center;
     align-items: center;
     width: 12px;
-    background-color: $color-text;
+    background-color: $color-shadow;
     opacity: .8;
     cursor: ew-resize;
 
@@ -281,13 +287,13 @@
         justify-content: center;
         color: white;
         box-shadow: 0 0 8px $color-shadow;
+        cursor: pointer;
 
         &.add {
           width: 64px;
           height: 64px;
           border-radius: 64px;
           background-color: $color-primary;
-          cursor: pointer;
           pointer-events: auto;
           transition: transform .2s;
           font-size: $font-size-large;
