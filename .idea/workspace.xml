@@ -2,53 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="115b4b38-38f5-4a9c-8878-2793993329a5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Login/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Login/stylesheet.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/stylesheet.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyProfile/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyProfile/stylesheet.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Nav/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Nav/stylesheet.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ProfileCard/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ProfileCard/stylesheet.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/categoryMap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/cityMap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/interestMap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/userMap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/city/city1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/city/city2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/city/city3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/curvy_border.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/interest/art.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/interest/baking.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/interest/basketball.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/interest/camping.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/interest/farms.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/interest/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/interest/meditation.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/interest/nature.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/interest/photography.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/interest/skateboarding.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/interest/travelling.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Event/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Event/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Event/stylesheet.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Event/stylesheet.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Plan/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Plan/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Plan/stylesheet.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Plan/stylesheet.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Profile/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Profile/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/cover_andywarhol.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/cover/andywarhol.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/cover_beer.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/cover/beer.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/cover_bukak.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/cover/bukak.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/cover_garosugil.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/cover/garosugil.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/cover_pcbang.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/cover/pcbang.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/cover_schoolfood.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/cover/schoolfood.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/profile1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/user/jason.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/profile2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/user/jake.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -68,7 +26,7 @@
         <entry file="file://$PROJECT_DIR$/src/Plan/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="580">
-              <caret line="39" column="21" lean-forward="true" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+              <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
               </folding>
@@ -76,7 +34,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Login/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="267">
@@ -89,10 +47,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/App/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data/userMap.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
-              <caret line="103" column="22" lean-forward="true" selection-start-line="103" selection-start-column="22" selection-end-line="103" selection-end-column="22" />
+              <caret line="103" column="22" selection-start-line="103" selection-start-column="22" selection-end-line="103" selection-end-column="22" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -124,7 +103,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>892</find>
       <find>.nav</find>
       <find>content</find>
       <find>box-shadow</find>
@@ -154,6 +132,7 @@
       <find>=== 13</find>
       <find>search</find>
       <find>InputCont</find>
+      <find>to=&quot;</find>
     </findStrings>
     <replaceStrings>
       <replace>Plan</replace>
@@ -211,9 +190,7 @@
         <option value="$PROJECT_DIR$/src/index.scss" />
         <option value="$PROJECT_DIR$/src/data/interestMap.js" />
         <option value="$PROJECT_DIR$/src/ProfileCard/stylesheet.scss" />
-        <option value="$PROJECT_DIR$/src/Nav/index.js" />
         <option value="$PROJECT_DIR$/src/Nav/stylesheet.scss" />
-        <option value="$PROJECT_DIR$/src/App/index.js" />
         <option value="$PROJECT_DIR$/src/MyProfile/index.js" />
         <option value="$PROJECT_DIR$/src/ProfileCard/index.js" />
         <option value="$PROJECT_DIR$/src/Main/stylesheet.scss" />
@@ -222,8 +199,11 @@
         <option value="$PROJECT_DIR$/src/MyProfile/stylesheet.scss" />
         <option value="$PROJECT_DIR$/src/Event/index.js" />
         <option value="$PROJECT_DIR$/src/Main/index.js" />
-        <option value="$PROJECT_DIR$/src/Plan/index.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/App/index.js" />
+        <option value="$PROJECT_DIR$/src/Nav/index.js" />
         <option value="$PROJECT_DIR$/src/Login/index.js" />
+        <option value="$PROJECT_DIR$/src/Plan/index.js" />
       </list>
     </option>
   </component>
@@ -253,67 +233,6 @@
               <item name="peachy-frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="App" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="peachy-frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="peachy-frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="peachy-frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="peachy-frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Event" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="peachy-frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="peachy-frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="peachy-frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="peachy-frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="peachy-frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="peachy-frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="peachy-frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="peachy-frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="peachy-frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="peachy-frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="MyProfile" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="peachy-frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="peachy-frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Plan" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="peachy-frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="peachy-frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Profile" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="peachy-frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="peachy-frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ProfileCard" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -390,10 +309,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56864000" />
+    <option name="totallyTimeSpent" value="57350000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49923897" visible="true" weight="0.1790235" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -420,9 +340,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/react-router/esm/react-router.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -598,16 +515,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/img/city/city2.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -701,7 +608,7 @@
     <entry file="file://$PROJECT_DIR$/src/data/userMap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
-          <caret line="103" column="22" lean-forward="true" selection-start-line="103" selection-start-column="22" selection-end-line="103" selection-end-column="22" />
+          <caret line="103" column="22" selection-start-line="103" selection-start-column="22" selection-end-line="103" selection-end-column="22" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
@@ -721,7 +628,7 @@
     <entry file="file://$PROJECT_DIR$/src/Plan/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
-          <caret line="39" column="21" lean-forward="true" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+          <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
           </folding>
@@ -734,6 +641,23 @@
           <caret line="32" column="74" selection-start-line="32" selection-start-column="74" selection-end-line="32" selection-end-column="74" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>

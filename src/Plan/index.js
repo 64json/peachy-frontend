@@ -144,7 +144,7 @@ function Plan() {
         <div className="trip">
           <div className="cover">
             <div className="header">
-              <Link className="back" to="/">
+              <Link className="back" to="/profile">
                 <FontAwesomeIcon icon={faArrowLeft} fixedWidth/>
               </Link>
               <div className="info">

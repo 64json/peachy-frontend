@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import Plan from '../Plan';
 import Login from '../Login';
 import './stylesheet.scss';
@@ -14,14 +14,14 @@ function App() {
           <Route path="/plan">
             <Plan/>
           </Route>
-          <Route path="/login">
-            <Login/>
+          <Route path="/main">
+            <Main/>
           </Route>
           <Route path="/profile">
             <MyProfile/>
           </Route>
           <Route path="/">
-            <Main/>
+            <Login/>
           </Route>
         </Switch>
       </div>

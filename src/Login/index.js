@@ -34,13 +34,13 @@ function Login() {
           {
             signUp ? (
               <div className="buttonContainer">
-                <Link className="button primary" to="/">Sign Up</Link>
+                <Link className="button primary" to="/main">Sign Up</Link>
                 <div className="button" onClick={() => setSignUp(false)}>Log In</div>
               </div>
             ) : (
               <div className="buttonContainer">
                 <div className="button" onClick={() => setSignUp(true)}>Sign Up</div>
-                <Link className="button primary" to="/">Enter</Link>
+                <Link className="button primary" to="/main">Enter</Link>
               </div>
             )
           }
