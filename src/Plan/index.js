@@ -3,67 +3,22 @@ import './stylesheet.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Profile from '../Profile';
 import Map from '../Map';
-import profile1 from '../img/profile1.jpg';
-import profile2 from '../img/profile2.jpg';
-import coverBeer from '../img/cover_beer.jpg';
-import coverBukak from '../img/cover_bukak.jpg';
-import coverSchoolfood from '../img/cover_schoolfood.jpg';
-import coverAndywarhol from '../img/cover_andywarhol.jpg';
-import coverGarosugil from '../img/cover_garosugil.jpg';
-import coverPcbang from '../img/cover_pcbang.jpg';
-import * as markerMap from '../img/category';
-import logo from '../img/logo.svg';
+import coverBeer from '../img/cover/beer.jpg';
+import coverBukak from '../img/cover/bukak.jpg';
+import coverSchoolfood from '../img/cover/schoolfood.jpg';
+import coverAndywarhol from '../img/cover/andywarhol.jpg';
+import coverGarosugil from '../img/cover/garosugil.jpg';
+import coverPcbang from '../img/cover/pcbang.jpg';
 import { classes } from '../utils';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons/faPaperPlane';
 import { faPlus } from '@fortawesome/free-solid-svg-icons/faPlus';
 import Event from '../Event';
-import { faUtensils } from '@fortawesome/free-solid-svg-icons/faUtensils';
 import { Marker, Polyline } from 'react-google-maps';
-import { faHotel } from '@fortawesome/free-solid-svg-icons/faHotel';
-import { faLandmark } from '@fortawesome/free-solid-svg-icons/faLandmark';
-import { faShoppingBag } from '@fortawesome/free-solid-svg-icons/faShoppingBag';
-import { faHiking } from '@fortawesome/free-solid-svg-icons/faHiking';
-import { faEllipsisH } from '@fortawesome/free-solid-svg-icons/faEllipsisH';
 import { faSearch } from '@fortawesome/free-solid-svg-icons/faSearch';
-
-const categoryMap = {
-  accomodations: {
-    marker: markerMap.accomodations,
-    color: '#0C9C71',
-    icon: faHotel,
-    name: 'Accommodations',
-  },
-  food_and_beverage: {
-    marker: markerMap.food_and_beverage,
-    color: '#C43636',
-    icon: faUtensils,
-    name: 'Food & Beverage',
-  },
-  landmarks: {
-    marker: markerMap.landmarks,
-    color: '#2199BF',
-    icon: faLandmark,
-    name: 'Landmarks',
-  },
-  shopping: {
-    marker: markerMap.shopping,
-    color: '#C6379E',
-    icon: faShoppingBag,
-    name: 'Shopping',
-  },
-  outdoor_activities: {
-    marker: markerMap.outdoor_activities,
-    color: '#DD8D30',
-    icon: faHiking,
-    name: 'Outdoor Activities',
-  },
-  others: {
-    marker: markerMap.others,
-    color: '#7310A2',
-    icon: faEllipsisH,
-    name: 'Others',
-  },
-};
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft';
+import { Link } from 'react-router-dom';
+import categoryMap from '../data/categoryMap';
+import userMap from '../data/userMap';
 
 
 function Plan() {
@@ -77,12 +32,10 @@ function Plan() {
   const [message, setMessage] = useState('');
   const [validClick, setValidClick] = useState(false);
   const [chats, setChats] = useState([
-    [0, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'],
-    [1, 'Ut enim ad minim veniam.'],
-    [0, 'quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'],
-    [1, 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'],
-    [0, 'Excepteur sint occaecat cupidatat non proident.'],
-    [1, 'sunt in culpa qui officia deserunt mollit anim id est laborum.'],
+    [0, 'Hey there! I see that we share many similar interests, would you be able to plan a unique itinerary for me'],
+    [1, 'Of course! Do you already have any existing plans?'],
+    [0, 'Not at the moment, you are free to plan it out whatever way you want.'],
+    [1, 'Alright, I will start doing it right now, you will be able to see it being updated in real time!'],
   ]);
   const [events, setEvents] = useState([{
     id: 'bukak',
@@ -94,8 +47,8 @@ function Plan() {
       lat: 37.602199,
       lng: 126.980590,
     },
-    start: 9,
-    duration: 3,
+    start: 10,
+    duration: 2,
     memo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   }, {
     id: 'schoolfood',
@@ -188,23 +141,25 @@ function Plan() {
   return (
     <div className="Plan">
       <div className="sidebar">
-        <div className="logo">
-          <img src={logo}/>
-        </div>
         <div className="trip">
           <div className="cover">
-            <div className="info">
-              <div>November 8 - 10th</div>
-              <div>Seoul, South Korea</div>
+            <div className="header">
+              <Link className="back" to="/">
+                <FontAwesomeIcon icon={faArrowLeft} fixedWidth/>
+              </Link>
+              <div className="info">
+                <div>November 15 - 17th</div>
+                <div>Seoul, South Korea</div>
+              </div>
             </div>
             <div className="name">
               Weekend Getaway to Seoul
             </div>
           </div>
           <div className="participants">
-            <Profile className="profile" picture={profile2} primary="Jake Wilkerson" secondary="and 3 others"
+            <Profile className="profile" user={userMap.jason} description="and 3 others"
                      traveller/>
-            <Profile className="profile" picture={profile1} primary="Jason Park" secondary="living in Seoul"
+            <Profile className="profile" user={userMap.jake} description="living in Seoul"
                      planner/>
           </div>
         </div>
@@ -253,7 +208,7 @@ function Plan() {
                 return (
                   <div className="dayLabelWrapper" key={day}>
                     <div className={classes('dayLabel', activeDay === day && 'active')}>
-                      Nov. {8 + day}th
+                      Nov. {15 + day}th
                     </div>
                   </div>
                 );

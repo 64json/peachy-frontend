@@ -13,19 +13,6 @@
     flex-direction: column;
     align-items: stretch;
 
-    .logo {
-      font-size: $font-size-large;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 4px;
-      color: $color-primary;
-
-      img {
-        height: 64px;
-      }
-    }
-
     .trip {
       display: flex;
       flex-direction: column;
@@ -41,18 +28,38 @@
         background-position: center;
         background-size: cover;
 
-        .info {
-          padding: 8px 12px;
+        .header {
+          height: 64px;
           display: flex;
-          flex-direction: column;
-          align-items: flex-end;
-          font-size: $font-size-small;
-          color: white;
+          justify-content: space-between;
+          align-items: center;
+
+          .back {
+            color: $color-background;
+            width: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: stretch;
+
+            &:hover {
+              background-color: $color-shadow;
+            }
+          }
+
+          .info {
+            margin-right: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            font-size: $font-size-small;
+            color: $color-background;
+          }
         }
 
         .name {
           padding: 16px 20px;
-          color: white;
+          color: $color-background;
           background: linear-gradient(rgba($color-dim, 0), rgba($color-dim, 1));
           font-weight: bold;
         }
@@ -91,15 +98,15 @@
 
           &.traveller {
             align-self: flex-end;
-            background-color: $color-primary;
-            color: white;
+            background-color: $color-secondary;
+            color: $color-background;
             margin-left: 64px;
           }
 
           &.planner {
             align-self: flex-start;
-            background-color: $color-secondary;
-            color: white;
+            background-color: $color-shadow;
+            color: $color-text;
             margin-right: 64px;
           }
         }
@@ -116,8 +123,8 @@
         }
 
         .send {
-          background-color: $color-primary;
-          color: white;
+          background-color: $color-secondary;
+          color: $color-background;
           padding: 8px 12px;
         }
       }
@@ -177,7 +184,7 @@
           .dayLabel {
             position: relative;
             width: 80px;
-            background-color: white;
+            background-color: $color-background;
             color: $color-text-light;
             text-align: right;
             padding-right: 8px;
@@ -249,7 +256,7 @@
       padding: 8px;
       display: flex;
       align-items: stretch;
-      background-color: white;
+      background-color: $color-background;
       border-radius: 4px;
       box-shadow: 0 0 8px $color-shadow;
 
@@ -281,7 +288,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        color: white;
+        color: $color-background;
         box-shadow: 0 0 8px $color-shadow;
         cursor: pointer;
 
@@ -313,7 +320,7 @@
           .name {
             margin-left: 8px;
             box-shadow: 0 0 8px $color-shadow;
-            background-color: white;
+            background-color: $color-background;
             padding: 4px 8px;
             margin-right: 8px;
             border-radius: 4px;

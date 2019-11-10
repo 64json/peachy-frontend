@@ -1,0 +1,137 @@
+@import '../constants';
+
+.ProfileCard {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  width: 892px;
+  height: 560px;
+  box-shadow: 0 0 8px $color-shadow;
+  border-radius: 4px;
+  overflow: hidden;
+  opacity: .5;
+  transition: opacity .2s;
+
+  .picture {
+    width: 340px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .info {
+    flex: 1;
+    box-shadow: 0 0 8px $color-shadow;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    min-width: 0;
+
+    .name {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+
+      .icon {
+        color: $color-shadow;
+      }
+
+      .text {
+        margin-left: 8px;
+      }
+    }
+
+    .section {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+
+      .title {
+        font-weight: bold;
+        color: $color-shadow;
+        margin-bottom: 8px;
+      }
+
+      &.sectionInterests {
+        .tagContainer {
+          display: flex;
+          flex-wrap: wrap;
+
+          .tag {
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            color: $color-background;
+            padding: 8px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+
+            .text {
+              font-weight: bold;
+            }
+
+            .icon {
+              margin-left: 4px;
+            }
+          }
+        }
+      }
+
+      &.sectionCities {
+        .cityContainer {
+          display: flex;
+          overflow-x: auto;
+          margin: -8px 0;
+          padding: 8px 0;
+
+          .city {
+            width: 160px;
+            height: 92px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 4px;
+            box-shadow: 0 0 8px $color-shadow;
+            margin-right: 12px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .like {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: $color-primary;
+    font-size: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .2s;
+  }
+
+  &.active {
+    opacity: 1;
+  }
+
+  &.liked {
+    .like {
+      opacity: .9;
+      font-size: 180px;
+    }
+  }
+}

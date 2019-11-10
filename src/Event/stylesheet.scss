@@ -15,7 +15,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    color: white;
+    color: $color-background;
     width: 48px;
     height: 48px;
     border-radius: 48px;
@@ -48,7 +48,7 @@
         flex-direction: column;
         align-items: stretch;
         padding: 36px 20px 16px;
-        color: white;
+        color: $color-background;
         background: linear-gradient(rgba($color-dim, 0), rgba($color-dim, 1));
 
         .name {
@@ -79,10 +79,10 @@
     .memo {
       flex: 1;
       padding: 32px 24px;
-      color: white;
+      color: $color-background;
 
       &::placeholder {
-        color: rgba(white, .5);
+        color: rgba($color-background, .5);
       }
     }
   }
@@ -97,7 +97,7 @@
 
         .info {
           .name {
-            border-bottom: 2px solid white;
+            border-bottom: 2px solid $color-background;
             margin-bottom: 0;
             cursor: text;
           }

@@ -1,0 +1,10 @@
+export { default as art } from './art.jpg';
+export { default as baking } from './baking.jpg';
+export { default as basketball } from './basketball.jpg';
+export { default as camping } from './camping.jpg';
+export { default as farms } from './farms.jpg';
+export { default as meditation } from './meditation.jpg';
+export { default as nature } from './nature.jpg';
+export { default as photography } from './photography.jpg';
+export { default as skateboarding } from './skateboarding.jpg';
+export { default as travelling } from './travelling.jpg';

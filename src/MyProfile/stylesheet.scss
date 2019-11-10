@@ -1,0 +1,163 @@
+@import '../constants';
+
+.MyProfile {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  .content {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-self: center;
+    align-items: stretch;
+    width: 840px;
+    box-shadow: 0 0 8px $color-shadow;
+    overflow: hidden;
+    transition: opacity .2s;
+
+    .profile {
+      width: 340px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      background-color: $color-secondary-dark;
+
+      .picture {
+        height: 560px;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .info {
+        flex: 1;
+        box-shadow: 0 0 8px $color-shadow;
+        display: flex;
+        flex-direction: column;
+        padding: 24px;
+        min-width: 0;
+        color: $color-background;
+
+        .name {
+          font-size: 48px;
+          font-weight: bold;
+          margin-bottom: 8px;
+        }
+
+        .item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 12px;
+
+          .icon {
+            color: $color-text-light;
+          }
+
+          .text {
+            margin-left: 8px;
+          }
+        }
+
+        .section {
+          .title {
+            color: $color-text-light !important;
+          }
+        }
+      }
+    }
+
+    .sectionContainer {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+      min-width: 0;
+    }
+
+    .profile .info,
+    .sectionContainer {
+      .section {
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        .title {
+          font-weight: bold;
+          color: $color-shadow;
+          margin-bottom: 8px;
+        }
+
+        &.sectionInterests {
+          .tagContainer {
+            display: flex;
+            flex-wrap: wrap;
+
+            .tag {
+              border-radius: 4px;
+              display: flex;
+              align-items: center;
+              color: $color-background;
+              padding: 8px;
+              margin-right: 8px;
+              margin-bottom: 8px;
+
+              .text {
+                font-weight: bold;
+              }
+
+              .icon {
+                margin-left: 4px;
+              }
+            }
+          }
+        }
+
+        &.sectionCities {
+          .cityContainer {
+            display: flex;
+            flex-wrap: wrap;
+
+            .city {
+              width: 200px;
+              height: 200px;
+              border-radius: 4px;
+              box-shadow: 0 0 8px $color-shadow;
+              margin-right: 16px;
+              margin-bottom: 16px;
+              display: flex;
+              flex-direction: column;
+              align-items: stretch;
+              overflow: hidden;
+
+              .cover {
+                height: 92px;
+                background-size: cover;
+                background-position: center;
+              }
+
+              .cityInfo {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                padding: 8px 12px;
+
+                .name {
+                  flex: 1;
+                  font-weight: bold;
+                }
+
+                .location,
+                .date {
+                  font-size: $font-size-small;
+                  color: $color-text-light;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -6,7 +6,7 @@ import { classes, formatTime } from '../utils';
 function Event({ className, event, onMouseDown, onResize, onClick, active, onChange }) {
   const { category, cover, name, venue, start, duration, memo } = event;
   const end = start + duration;
-  const time = `November ${8 + start / 24 | 0}th, ${formatTime(start)} - ${formatTime(end)} ${end < 12 ? 'A' : 'P'}M`;
+  const time = `November ${15 + start / 24 | 0}th, ${formatTime(start)} - ${formatTime(end)} ${end < 12 ? 'A' : 'P'}M`;
   return (
     <div className={classes('Event', active && 'active', className)} style={{
       top: 72 * start,
