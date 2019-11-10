@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/peachy-frontend/static/css/main.f4788150.chunk.css",
-    "main.js": "/peachy-frontend/static/js/main.727560af.chunk.js",
-    "main.js.map": "/peachy-frontend/static/js/main.727560af.chunk.js.map",
+    "main.js": "/peachy-frontend/static/js/main.286c84bf.chunk.js",
+    "main.js.map": "/peachy-frontend/static/js/main.286c84bf.chunk.js.map",
     "runtime-main.js": "/peachy-frontend/static/js/runtime-main.e409b1c8.js",
     "runtime-main.js.map": "/peachy-frontend/static/js/runtime-main.e409b1c8.js.map",
-    "static/js/2.fe888061.chunk.js": "/peachy-frontend/static/js/2.fe888061.chunk.js",
-    "static/js/2.fe888061.chunk.js.map": "/peachy-frontend/static/js/2.fe888061.chunk.js.map",
+    "static/js/2.bdf48a24.chunk.js": "/peachy-frontend/static/js/2.bdf48a24.chunk.js",
+    "static/js/2.bdf48a24.chunk.js.map": "/peachy-frontend/static/js/2.bdf48a24.chunk.js.map",
     "index.html": "/peachy-frontend/index.html",
-    "precache-manifest.d9c07f2adeded8639c36d347bd600191.js": "/peachy-frontend/precache-manifest.d9c07f2adeded8639c36d347bd600191.js",
+    "precache-manifest.2a24572910067e5ec46483385899c72e.js": "/peachy-frontend/precache-manifest.2a24572910067e5ec46483385899c72e.js",
     "service-worker.js": "/peachy-frontend/service-worker.js",
     "static/css/main.f4788150.chunk.css.map": "/peachy-frontend/static/css/main.f4788150.chunk.css.map",
     "static/media/andywarhol.jpg": "/peachy-frontend/static/media/andywarhol.40c8cf73.jpg",
@@ -40,8 +40,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.e409b1c8.js",
-    "static/js/2.fe888061.chunk.js",
+    "static/js/2.bdf48a24.chunk.js",
     "static/css/main.f4788150.chunk.css",
-    "static/js/main.727560af.chunk.js"
+    "static/js/main.286c84bf.chunk.js"
   ]
 }
