@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/peachy-frontend/precache-manifest.2a24572910067e5ec46483385899c72e.js"
+  "/peachy-frontend/precache-manifest.e682a436e92c24e7eaf6e5b6e45251be.js"
 );
 
 self.addEventListener('message', (event) => {

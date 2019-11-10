@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "24f10ded7c52fe4a9774c551e3774d8c",
+    "revision": "a3f3354e82cf9e7bf779cc5a909d8e0b",
     "url": "/peachy-frontend/index.html"
   },
   {
-    "revision": "4c0cd567610087dea54b",
-    "url": "/peachy-frontend/static/css/main.f4788150.chunk.css"
+    "revision": "98d3d6e1d0de1dcd111b",
+    "url": "/peachy-frontend/static/css/main.65ef3bdb.chunk.css"
   },
   {
     "revision": "dff181010e0cd198c586",
     "url": "/peachy-frontend/static/js/2.bdf48a24.chunk.js"
   },
   {
-    "revision": "4c0cd567610087dea54b",
+    "revision": "98d3d6e1d0de1dcd111b",
     "url": "/peachy-frontend/static/js/main.286c84bf.chunk.js"
   },
   {
@@ -28,8 +28,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/peachy-frontend/static/media/art.5d2f53e8.jpg"
   },
   {
-    "revision": "b0138fde5509796547b2dd836b1c4cf9",
-    "url": "/peachy-frontend/static/media/background.b0138fde.jpg"
+    "revision": "3af8c7c3603aac97b488e2b3750f327a",
+    "url": "/peachy-frontend/static/media/background.3af8c7c3.jpg"
   },
   {
     "revision": "d90a859c76f930c34d9ba298cf23f14b",
